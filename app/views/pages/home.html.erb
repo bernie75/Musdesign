@@ -1,2 +1,82 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: url(<%= image_path 'bois.jpg' %>);">
+  <div class="banner-content">
+    <h1>Mus Design</h1>
+    <div class="text-center padded" id="newsletter">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get news from us</p>
+      <form class="form-inline">
+        <input placeholder="bob@gmail.com" class="form-control" type="email">
+        <input value="Subscribe" class="btn btn-primary btn-bordered btn-bordered-primary" type="submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class=" text-center padded features">
+  <div class= "cantainer">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= image_tag '' %>
+        <h2>Discover the world</h2>
+        <p>The earth is your new home.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= image_tag '' %>
+        <h2>Pay online</h2>
+        <p>No cash issues anymore.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <%= image_tag '' %>
+        <h2>Meet people</h2>
+        <p>Discover new culture and lifestyle.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path 'lampe2.jpg'%>);">
+        <div class="card-category">Activity</div>
+          <div class="card-description">
+            <h2>DriftWood</h2>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+          <%= image_tag '', class: 'card-user avatar' %>
+          <a class="card-link" href="#" ></a>
+        </div>
+      </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path 'fauteuil.jpg', rotate: "90deg"%>);">
+        <div class="card-category">HO</div>
+          <div class="card-description">
+          <h2>Design</h2>
+          <p>Very cool stuff, useful and smart</p>
+          </div>
+          <%= image_tag '', class: 'card-user avatar' %>
+          <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path 'mur.jpg'%>);">
+        <div class="card-category">Events</div>
+          <div class="card-description">
+          <h2>Creation Unique</h2>
+          <p>Very cool stuff, useful and smart</p>
+          </div>
+        <%= image_path'', class: 'card-user avatar' %>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+  </div>
+</div>
+
