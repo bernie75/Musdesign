@@ -1,197 +1,135 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.home-body {
+  height: 100vh;
+}
+
 .banner {
-  color: white;
+  color: $white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .banner h1 {
-  font-size: 50px;
+  font-size: 75px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 .banner p {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
-body {
-  margin: 0;
-  font-family: Open-sans, sans-serif;
+.product {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
 }
-h1, h2, h3 {
-  font-family: Raleway, Helvetica, sans-serif;
+
+#first {
+  margin-top: 50px;
 }
-h2 {
-  font-size: 28px;
-  font-weight: bold;
+
+/* Body design */
+.product-body {
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  h1 {
+  font-weight: bolder;
+  font-size: 26px;
+  margin-top: 0;
+  }
+  h3 {
+  font-weight: lighter;
+  color: $gray;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 18px;
+  }
+}
+
+
+
+/* Product image */
+.product-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+/* Controls design */
+.product-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.product-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: $white;
+}
+.product-controls a:hover {
+  color: #D3473C !important
+}
+.product-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+a:hover {
+  text-decoration: none;
+}
+.product:hover {
+  background: #e3e3e5;
+  cursor: pointer;
+}
+
+// .product:hover .product-upvote { transform: scale(1.2) }
+.product:hover .product-controls-hidden a { color: #E6E6E6 }
+.product-upvote:hover .product-arrow { border-bottom: 9px solid #5898f1 }
+
+
+.vdo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gif {
+  position: absolute;
+}
+
+.msg-yvon {
+  margin-top: 80px;
+}
+
+.owners {
+  padding: 15px 0 45px 0;
+  background-color: #E3E3E5;
+}
+
+.owners-content {
   margin-bottom: 30px;
-  margin-top: 0;
+  h1 {
+    margin-top: 12.5px;
+  }
+  h3 {
+    color: #292c3c;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 18px;
+  }
 }
-.padded {
-  padding: 100px 0;
-}
-.wrapper-grey {
-  background: #F4F4F4;
-}
-
-
-body {
-  margin: 0;
-  background: #000;
-}
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-.stopfade {
-   opacity: .5;
-}
-
-#polina {
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100;
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
-}
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#polina button {
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none;
-  margin: 1rem auto;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: .3s background;
-}
-#polina button:hover {
-   background: rgba(0,0,0,0.5);
-}
-
-a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  background:rgba(0,0,0,0.5);
-  padding: .5rem;
-  transition: .6s background;
-}
-a:hover{
-  background:rgba(0,0,0,0.9);
-}
-@media screen and (max-width: 500px) {
-  div{width:70%;}
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}body {
-  margin: 0;
-  background: #000;
-}
-video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
- background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-.stopfade {
-   opacity: .5;
-}
-
-#polina {
-  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
-  font-weight:100;
-  background: rgba(0,0,0,0.3);
-  color: white;
-  padding: 2rem;
-  width: 33%;
-  margin:2rem;
-  float: right;
-  font-size: 1.2rem;
-}
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-top: 0;
-  letter-spacing: .3rem;
-}
-#polina button {
-  display: block;
-  width: 80%;
-  padding: .4rem;
-  border: none;
-  margin: 1rem auto;
-  font-size: 1.3rem;
-  background: rgba(255,255,255,0.23);
-  color: #fff;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: .3s background;
-}
-#polina button:hover {
-   background: rgba(0,0,0,0.5);
-}
-
-a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  background:rgba(0,0,0,0.5);
-  padding: .5rem;
-  transition: .6s background;
-}
-a:hover{
-  background:rgba(0,0,0,0.9);
-}
-@media screen and (max-width: 500px) {
-  div{width:70%;}
-}
-@media screen and (max-device-width: 800px) {
-  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
